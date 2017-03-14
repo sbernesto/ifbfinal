@@ -51,16 +51,16 @@ site_status_msg = get_site_status_msg(course_id)
   <header id="global-navigation" class="theme-header header-global ${"slim" if course else ""}" >
     <div class="theme-header-info">
         <div class="theme-header-info_contact">
-            <span class="theme-header-info_text">Have any question?</span>
-            <span class="theme-header-info_phone">+1 857 4533328</span>
-            <a class="theme-header-info_mail" href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#097;&#099;&#099;&#111;&#111;&#110;&#103;&#097;&#110;&#103;&#046;&#099;&#111;&#109;">info@raccoongang.com</a>
+            <span class="theme-header-info_text">¿Tienes dudas?</span>
+            <span class="theme-header-info_phone">01 (222) 241 3070</span>
+            <a class="theme-header-info_mail" href="mailto:contacto@institutofrancisbacon.mx">contacto@institutofrancisbacon.mx</a>
         </div>
         <div class="theme-header-info_social">
-            <span class="theme-header-info_text">Find us in social network</span>
+            <span class="theme-header-info_text">Encuéntranos en las redes sociales</span>
             <ul class="social-list">
-                <li class="social-list_item"><a class="social-list_link social-list_link__twitter" target="_blank" href="https://twitter.com/raccoongangcom"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li class="social-list_item"><a class="social-list_link social-list_link__facebook" target="_blank" href="https://www.facebook.com/raccoongangco"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li class="social-list_item"><a class="social-list_link social-list_link__linkedin" target="_blank" href="https://www.linkedin.com/company/raccoon-gang"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li class="social-list_item"><a class="social-list_link social-list_link__twitter" target="_blank" href="https://twitter.com/insfrancisbacon"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li class="social-list_item"><a class="social-list_link social-list_link__facebook" target="_blank" href="https://https://www.facebook.com/institutofrancisbacon"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+               <!-- <li class="social-list_item"><a class="social-list_link social-list_link__linkedin" target="_blank" href="https://www.linkedin.com/company/raccoon-gang"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li> -->
             </ul>
         </div>
     </div>
@@ -79,7 +79,7 @@ site_status_msg = get_site_status_msg(course_id)
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
             <li class="item nav-global-01">
-              <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+              <a href="${marketing_link('COURSES')}">${_('Explora nuestros cursos')}</a>
             </li>
           % endif
           % if show_program_listing:
@@ -127,7 +127,7 @@ site_status_msg = get_site_status_msg(course_id)
             </li>
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
               <li class="item nav-global-02">
-                <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
+                <a href="${marketing_link('COURSES')}">${_("Cursos")}</a>
               </li>
             % endif
             <li class="item nav-global-03">
@@ -140,7 +140,7 @@ site_status_msg = get_site_status_msg(course_id)
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
               <li class="item nav-global-05">
-                <a class="btn" href="/courses">${_("Explore Courses")}</a>
+                <a class="btn" href="/courses">${_("Explorar cursos")}</a>
               </li>
             %endif
             % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
@@ -149,7 +149,7 @@ site_status_msg = get_site_status_msg(course_id)
               </li>
             % else:
               <li class="item nav-global-04">
-                <a class="btn-neutral" href="/register${login_query()}">${_("Register")}</a>
+                <a class="btn-neutral" href="/register${login_query()}">${_("Registrarse")}</a>
               </li>
             % endif
           % endif
@@ -161,9 +161,9 @@ site_status_msg = get_site_status_msg(course_id)
           <li class="item nav-courseware-01">
             % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
               % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-                <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+                <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Entrar")}</a>
               % else:
-                <a class="theme-btn" href="/login${login_query()}">${_("Sign in")}</a>
+                <a class="theme-btn" href="/login${login_query()}">${_("Entrar")}</a>
               % endif
             % endif
           </li>
@@ -213,10 +213,10 @@ site_status_msg = get_site_status_msg(course_id)
     </div>
     <nav class="theme-main-nav_holder">
         <ul class="theme-main-nav_list">
-            <li class="theme-main-nav_item"><a href="/about" class="theme-main-nav_link">About The University</a></li>
-            <li class="theme-main-nav_item"><a href="/courses" class="theme-main-nav_link">Courses</a></li>
-            <li class="theme-main-nav_item"><a href="/blog" class="theme-main-nav_link">Blog</a></li>
-            <li class="theme-main-nav_item"><a href="/contact" class="theme-main-nav_link">Contact Us</a></li>
+            <li class="theme-main-nav_item"><a href="http://www.institutofrancisbacon.mx/" class="theme-main-nav_link">Acerca de IFB</a></li>
+            <li class="theme-main-nav_item"><a href="/courses" class="theme-main-nav_link">Cursos</a></li>
+            <!-- <li class="theme-main-nav_item"><a href="/blog" class="theme-main-nav_link">Blog</a></li> -->
+            <li class="theme-main-nav_item"><a href="http://www.institutofrancisbacon.mx/contacto-preparatoria-en-linea/" class="theme-main-nav_link">Contactanos</a></li>
         </ul>
     </nav>
 </div>
